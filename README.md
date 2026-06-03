@@ -1,7 +1,7 @@
 # Documentación Técnica: Estandarización de Módulos de Mantenimiento (CRUD)
 
 > **NOTA DE DISEÑO GLOBAL:**
-> Este proyecto utiliza **Tailwind CSS** a nivel global para todo el diseño, definición de estilos y maquetación de la interfaz de usuario. Cualquier nueva vista, componente o formulario dentro de los mantenimientos debe implementarse utilizando exclusivamente las clases utilitarias de Tailwind CSS.
+> Este proyecto utiliza **Tailwind CSS** a nivel global para todo el diseño, definición de estilos y maquetación de la interfaz de usuario. Cualquier nueva vista, componente o formulario dentro de los mantenimientos debe implementarse utilizando las clases utilitarias de Tailwind CSS.
 ### Instalación Rápida de Tailwind CSS
 Si se necesita configurar Tailwind CSS desde cero o verificar la instalación en tu entorno de Angular, se puede seguir estos pasos basados en la documentación oficial:
 
@@ -379,7 +379,7 @@ El HTML se divide estrictamente en dos bloques controlados por *ngIf="mostrarFor
       <i class="fas fa-plus mr-2"></i> Agregar
     </button>
   </div>
-
+<!-- ─── LISTADO  ─── -->
   <app-list-items
     *ngIf="!cargandoListado"
     [datos]="listaDatos"
@@ -393,6 +393,7 @@ El HTML se divide estrictamente en dos bloques controlados por *ngIf="mostrarFor
   >
   </app-list-items>
 
+<!-- ─── TEMPLATE DE ACCIONES PARA EL LISTADO  ─── -->
   <ng-template #accionesEntidad let-item>
     
     <button
@@ -414,6 +415,7 @@ El HTML se divide estrictamente en dos bloques controlados por *ngIf="mostrarFor
 
 </div>
 
+<!-- ─── FORMULARIO PARA LOS CAMPOS (CRUD)  ─── -->
 <div *ngIf="mostrarFormulario" class="mt-4">
   
   <div class="sticky top-0 bg-gray-100 dark:bg-gray-700 border-b border-gray-200 p-4 mb-6 z-10">
